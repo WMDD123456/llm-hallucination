@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "question": "地球绕太阳公转一周需要多长时间？",
+    "answer": "约365.25天，即一年",
+    "type": "数值/时间题",
+    "evidence": "https://zh.wikipedia.org/wiki/地球"
+  },
+  {
+    "id": 2,
+    "question": "中华人民共和国的首都是哪个城市？",
+    "answer": "北京",
+    "type": "事实判断题",
+    "evidence": "https://zh.wikipedia.org/wiki/中华人民共和国"
+  },
+  {
+    "id": 3,
+    "question": "水的化学式是什么？",
+    "answer": "H2O",
+    "type": "事实判断题",
+    "evidence": "https://zh.wikipedia.org/wiki/水"
+  },
+  {
+    "id": 4,
+    "question": "第一次世界大战爆发于哪一年？",
+    "answer": "1914年",
+    "type": "数值/时间题",
+    "evidence": "https://zh.wikipedia.org/wiki/第一次世界大战"
+  },
+  {
+    "id": 5,
+    "question": "光在真空中的速度大约是多少？",
+    "answer": "约30万千米每秒（299792458米/秒）",
+    "type": "数值/时间题",
+    "evidence": "https://zh.wikipedia.org/wiki/光速"
+  },
+  {
+    "id": 6,
+    "question": "《红楼梦》的作者是谁？",
+    "answer": "曹雪芹",
+    "type": "事实判断题",
+    "evidence": "https://zh.wikipedia.org/wiki/红楼梦"
+  },
+  {
+    "id": 7,
+    "question": "人体最大的器官是什么？",
+    "answer": "皮肤",
+    "type": "事实判断题",
+    "evidence": "https://zh.wikipedia.org/wiki/皮肤"
+  },
+  {
+    "id": 8,
+    "question": "太阳系中离太阳最近的行星是哪一颗？",
+    "answer": "水星",
+    "type": "事实判断题",
+    "evidence": "https://zh.wikipedia.org/wiki/水星"
+  },
+  {
+    "id": 9,
+    "question": "DNA 的全称是什么？",
+    "answer": "脱氧核糖核酸",
+    "type": "事实判断题",
+    "evidence": "https://zh.wikipedia.org/wiki/脱氧核糖核酸"
+  },
+  {
+    "id": 10,
+    "question": "世界上最高的山峰是哪座？海拔多少米？",
+    "answer": "珠穆朗玛峰，海拔8848.86米",
+    "type": "多实体关系题",
+    "evidence": "https://zh.wikipedia.org/wiki/珠穆朗玛峰"
+  },
+  {
+    "id": 11,
+    "question": "秦始皇统一六国是在哪一年？",
+    "answer": "公元前221年",
+    "type": "数值/时间题",
+    "evidence": "https://zh.wikipedia.org/wiki/秦朝"
+  },
+  {
+    "id": 12,
+    "question": "人体正常体温大约是多少摄氏度？",
+    "answer": "约36.5-37.2摄氏度",
+    "type": "数值/时间题",
+    "evidence": "https://zh.wikipedia.org/wiki/体温"
+  },
+  {
+    "id": 13,
+    "question": "元素周期表中第一个元素是什么？",
+    "answer": "氢（H）",
+    "type": "事实判断题",
+    "evidence": "https://zh.wikipedia.org/wiki/氢"
+  },
+  {
+    "id": 14,
+    "question": "中国的四大发明是什么？",
+    "answer": "造纸术、指南针、火药、印刷术",
+    "type": "多实体关系题",
+    "evidence": "https://zh.wikipedia.org/wiki/四大发明"
+  },
+  {
+    "id": 15,
+    "question": "π 的近似值是多少？",
+    "answer": "约3.14159",
+    "type": "数值/时间题",
+    "evidence": "https://zh.wikipedia.org/wiki/圆周率"
+  },
+  {
+    "id": 16,
+    "question": "世界上最大的海洋是哪个？",
+    "answer": "太平洋",
+    "type": "事实判断题",
+    "evidence": "https://zh.wikipedia.org/wiki/太平洋"
+  },
+  {
+    "id": 17,
+    "question": "明朝的开国皇帝是谁？",
+    "answer": "朱元璋（明太祖）",
+    "type": "事实判断题",
+    "evidence": "https://zh.wikipedia.org/wiki/朱元璋"
+  },
+  {
+    "id": 18,
+    "question": "电流的单位是什么？以谁的名字命名？",
+    "answer": "安培，以安德烈-玛丽·安培的名字命名",
+    "type": "多实体关系题",
+    "evidence": "https://zh.wikipedia.org/wiki/安培"
+  },
+  {
+    "id": 19,
+    "question": "太阳主要由什么元素组成？",
+    "answer": "氢和氦，其中氢约占74%，氦约占24%",
+    "type": "多实体关系题",
+    "evidence": "https://zh.wikipedia.org/wiki/太阳"
+  },
+  {
+    "id": 20,
+    "question": "DNA 的双螺旋结构是由谁发现的？",
+    "answer": "沃森和克里克（James Watson 和 Francis Crick）",
+    "type": "多实体关系题",
+    "evidence": "https://zh.wikipedia.org/wiki/脱氧核糖核酸"
+  }
+]

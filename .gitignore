@@ -1,0 +1,25 @@
+# 环境变量 / API 密钥
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# 知识库索引（体积大，可本地重建）
+data/kb_index/
+
+# 实验结果（体积大）
+data/results/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
