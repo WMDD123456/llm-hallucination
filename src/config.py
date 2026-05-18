@@ -6,7 +6,14 @@ load_dotenv()
 
 PROJECT_ROOT = Path(__file__).parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
-QUESTIONS_FILE = DATA_DIR / "questions.json"
+DATASETS = {
+    "demo": DATA_DIR / "questions.json",
+    "chinese_simpleqa": DATA_DIR / "questions_chinese_simpleqa.json",
+    "webqa": DATA_DIR / "questions_webqa.json",
+    "eval_150": DATA_DIR / "eval_set_150.json",
+}
+
+QUESTIONS_FILE = DATASETS["demo"]  # 默认
 KB_DIR = DATA_DIR / "knowledge_base"
 KB_INDEX_DIR = DATA_DIR / "kb_index"
 RESULTS_DIR = DATA_DIR / "results"
@@ -19,11 +26,6 @@ MODEL_CONFIGS = {
         "api_key": os.getenv("DEEPSEEK_API_KEY", ""),
         "base_url": "https://api.deepseek.com/v1",
         "display_name": "DeepSeek-Chat",
-    },
-    "qwen-plus": {
-        "api_key": os.getenv("DASHSCOPE_API_KEY", ""),
-        "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
-        "display_name": "Qwen-Plus",
     },
     "glm-4-flash": {
         "api_key": os.getenv("ZHIPU_API_KEY", ""),

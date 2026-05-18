@@ -3,7 +3,7 @@ from src.config import get_model_config, SYSTEM_PROMPT, TEMPERATURE, MAX_TOKENS
 
 
 class ModelAPI:
-    """统一的模型调用接口，支持 DeepSeek / Qwen / GLM"""
+    """统一的模型调用接口，支持 DeepSeek / GLM"""
 
     def __init__(self, model_name: str):
         cfg = get_model_config(model_name)

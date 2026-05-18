@@ -15,7 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from src.config import (
-    QUESTIONS_FILE, KB_DIR, KB_INDEX_DIR, RAG_CONFIG, get_available_models
+    QUESTIONS_FILE, DATASETS, KB_DIR, KB_INDEX_DIR, RAG_CONFIG, get_available_models
 )
 from src.experiments.runner import run_experiment, save_results
 from src.evaluation.metrics import compute_metrics, compute_mitigation_gain, print_report
@@ -51,15 +51,15 @@ def step1_build_kb():
         return False
 
 
-def step2_run_experiments(models, groups):
+def step2_run_experiments(models, groups, questions_file):
     """Step 2: 运行实验"""
     import json
 
-    if not QUESTIONS_FILE.exists():
-        print(f"题目文件不存在: {QUESTIONS_FILE}")
+    if not questions_file.exists():
+        print(f"题目文件不存在: {questions_file}")
         return None
 
-    with open(QUESTIONS_FILE, encoding="utf-8") as f:
+    with open(questions_file, encoding="utf-8") as f:
         questions = json.load(f)
     print(f"[Step 2] 加载 {len(questions)} 道题目")
 
@@ -113,11 +113,20 @@ def step3_evaluate(results_path):
 
 def main():
     parser = argparse.ArgumentParser(description="大模型幻觉检测实验")
-    parser.add_argument("--models", nargs="+", default=None, help="指定模型，如 deepseek-chat qwen-plus")
+    parser.add_argument("--models", nargs="+", default=None, help="指定模型，如 deepseek-chat glm-4-flash")
     parser.add_argument("--groups", nargs="+", default=None, help="指定实验组，如 G1 G2")
     parser.add_argument("--eval-only", type=str, default=None, help="仅评估指定的结果文件")
     parser.add_argument("--skip-kb", action="store_true", help="跳过知识库构建")
+    parser.add_argument("--dataset", type=str, default="demo",
+                        help=f"选择数据集: {', '.join(DATASETS.keys())}")
     args = parser.parse_args()
+
+    # 根据 --dataset 参数选择题目文件
+    dataset_file = DATASETS.get(args.dataset)
+    if dataset_file is None:
+        print(f"未知数据集: {args.dataset}")
+        print(f"可用: {', '.join(DATASETS.keys())}")
+        return
 
     # 仅评估模式
     if args.eval_only:
@@ -152,7 +161,7 @@ def main():
             groups = ["G1"]
 
     # Step 2: 运行实验
-    results_path = step2_run_experiments(models, groups)
+    results_path = step2_run_experiments(models, groups, dataset_file)
     if results_path is None:
         return
 
