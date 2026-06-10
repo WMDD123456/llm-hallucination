@@ -180,3 +180,12 @@ python visualize_results.py
 4. 四套由浅至深的幻觉缓解实现方案源码：裸模型基线、基础 RAG、异构多模型投票、全链路缓解方案。
 5. 可运行命令行 Demo、项目源码、环境说明、运行说明、实验记录与指标计算脚本。
 6. 答辩汇报 PPT、实验对比图表、G1–G4 指标汇总表和典型案例展示材料。
+
+## 十一、参考文献
+
+[1] A Comprehensive Survey of Hallucination in Large Language Models
+[2] HalluLens: LLM Hallucination Benchmark
+[3] A Survey on Hallucination in Large Language Models
+[4] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+[5] Self-Check: Teaching LLMs to Check Their Own Facts
+[6] 大语言模型事实性幻觉检测与缓解方法研究
